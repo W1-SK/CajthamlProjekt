@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="https://api.ssps.cajthaml.eu/file/64d9f18f79dad891e8a07c73">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <h2 id="page-title"><a href="#top">D&D Wiki</a></h2>
+            <div id="mobile-group">
+                <div class="search">
+                    <button class="search-button">
+                        <p>Hledat</p>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-search" viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M9 3.5a5.5 5.5 0 1 1-4.08 9.15l-3.32 3.32a.75.75 0 0 1-1.06-1.06l3.32-3.32A5.5 5.5 0 0 1 9 3.5zm0 1a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+
+
+                <button id="themeChange" class="darkmode">
+                    <svg class="icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+
+                            <symbol id="icon-sun" viewBox="0 0 35 35">
+                                <path
+                                    d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z" />
+                            </symbol>
+
+                            <symbol id="icon-moon" viewBox="0 0 100 100">
+                                <path
+                                    d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z" />
+                            </symbol>
+                        </defs>
+
+                        <use href="#icon-sun" class="icon-sun" width="100" height="100" x="0" y="0" />
+                        <use href="#icon-moon" class="icon-moon" width="100" height="100" x="0" y="0" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="explorer">
+                <button id="explorer" class="collapsible">
+                    <h2>Procházet</h2>
+
+                </button>
+                <div class="explorer-content content">
+                    <ul>
+                        <li>
+                            <p>Obsah wiki...</p>
+                        </li>
+                    </ul>
+                </div>
+
+        </aside>
+
+        <article>
+            <div class="page-header">
+                <h1>Balenpost</h1>
+                <p>03.06.2025</p>
+            </div>
+            <section id="contents">
+                <p>Balenpost is a small Cerberus Assembly outpost and research facility on the southwestern shore of the
+                    island of Foren in the Eiselcross region of Wildemount.</p>
+
+                <h2>Location</h2>
+                <p>Perched atop a rocky bluff overlooking icy seas, the fort’s ten-foot-high walls are built of thick,
+                    frozen logs and reinforced with an iron portcullis guarding the single seaside gate.</p>
+
+                <h2>Leadership & Society</h2>
+                <p>The Assembly-appointed overseer, currently Wardlow Akron, enforces a brutal meritocracy: only those
+                    who return with Aeorian relics earn their wages. Most of the 205 residents (as of 835 PD) are human
+                    mages or adventurers, with halflings, gnomes, and dragonborn making up the remainder.</p>
+
+                <h2>Points of Interest</h2>
+                <p><strong>Horswell’s Lab:</strong> A glass-paneled tower where Korberta Horswell experiments on
+                    recovered Aeorian items, attempting to unlock and replicate their alien magics.</p>
+
+                <h2>Adventure Hooks</h2>
+                <p>• A desperate guide hires the party to escort an underpaid expedition back to Balenpost’s labs before
+                    supplies run out.
+                    • Rumors of a secret vault beneath the central barracks promise untold Aeorian treasures…but those
+                    who’ve delved too deep never returned.
+                    • Spies of the Dwendalian Crown seek proof the Assembly plans to weaponize recovered relics; uncover
+                    their spy network before war breaks out.</p>
+
+            </section>
+        </article>
+
+        <aside class="toc">
+
+            <button class="collapsible" id="toc">
+                <h3>Obsah</h3>
+            </button>
+
+            <div id="toc-content" class="content">
+                <script src="../scripts/tocGen.js"></script>
+            </div>
+        </aside>
+    </div>
+
+    <script src="../scripts/collapsible.js"></script>
+    <script src="../scripts/themeToggle.js"></script>
+</body>
+
+</html>

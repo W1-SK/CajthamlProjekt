@@ -1,0 +1,270 @@
+:root {
+    --bg-color: #fffcf7;
+    --text-color: #c14343;
+    --sidebar-bg: #fffcf7;
+    --accent-color: #af7b7a;
+    --paragraph-color: #70615f;
+    --search-bar: #e7c8a3;
+    --search-bar-text: #766563;
+    --date: #914646;
+}
+
+body.dark {
+    --bg-color: #161618;
+    --text-color: #ebebec;
+    --sidebar-bg: #161618;
+    --accent-color: #7b97aa;
+    --paragraph-color: #d4d4c9;
+    --search-bar: #393639;
+    --search-bar-text: #cbd4d4;
+    --date: #64645a;
+}
+
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon-sun,
+.icon-moon {
+    display: none;
+}
+
+body:not(.dark) .icon-sun {
+    display: block;
+}
+
+body.dark .icon-moon {
+    display: block;
+    fill: white;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2.75rem;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-top: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.12rem;
+    margin-top: 1.62rem;
+    margin-bottom: 1rem;
+}
+
+h4,
+h5,
+h6 {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1f auto;
+    width: 75vw;
+    height: 100vh;
+    padding-top: 8vh;
+}
+
+aside #page-title {
+
+    color: var(--accent-color);
+    font-size: 2.5em;
+    margin: 0;
+}
+
+#page-title a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--accent-color)
+}
+
+.search-button {
+    background-color: var(--search-bar);
+    border: none;
+    color: var(--search-bar-text);
+    width: 230px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    margin: 30px 0;
+    padding-left: 15px;
+}
+
+.search-button p {
+    margin: auto 0;
+}
+
+.darkmode {
+    background-color: rgba(0, 0, 0, 0);
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px;
+    border: none
+}
+
+.darkmode svg {
+    width: 100%;
+    height: 100%;
+}
+
+#explorer {
+    height: 35px;
+    width: 80%;
+    border: none;
+    color: var(--text-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#explorer h2 {
+    margin: 0;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.page-header {
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.page-header p {
+    margin-top: 10px;
+    color: var(--date);
+    font-size: 1.2em;
+}
+
+article section p {
+    color: var(--paragraph-color);
+    margin-bottom: 20px;
+}
+
+#toc {
+    height: 35px;
+    width: 80%;
+    border: none;
+    color: var(--text-color);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#toc-content {
+    max-width: 300px;
+    margin-bottom: 24px;
+}
+
+#toc-content li {
+    margin: 4px 0;
+}
+
+#toc-content a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+#toc-content a:hover {
+    color: var(--text-color);
+}
+
+#toc-content ul ul {
+    margin-left: 16px;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.collapsible:after {
+    content: '\25C0';
+    font-size: 13px;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: '\25BC';
+}
+
+section {
+    margin-bottom: 3vh;
+}
+
+.toc {
+    height: 100%;
+}
+
+/* === RESPONSIVITA === */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .container aside:last-child,
+    .explorer {
+        display: none;
+    }
+
+    .container aside:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #mobile-group {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .search{
+        width: 100%;
+    }
+    .search-button {
+        margin: 0;
+        width: 100%;
+    }
+}
